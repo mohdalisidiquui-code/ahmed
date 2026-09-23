@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #111;
+        }
+        .loading-screen{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .loader{
+            width:60px;
+            height:60px;
+            border:6px solid green;
+            border-top:6px solid white;
+            border-radius:50%;
+
+            animation-name: loading;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes loading {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+    <div class="loading-screen">
+        <div class="loader"></div>
+    </div>
+    
+</body>
+</html>
